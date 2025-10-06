@@ -209,7 +209,8 @@ export function AnalysisView({ entity, entityType, onBack }: AnalysisViewProps) 
 
           {/* Detailed Analysis Tabs */}
           <Tabs defaultValue="overview" className="space-y-6">
-            <TabsList className="inline-flex h-auto w-full justify-start gap-1 bg-muted p-1.5 rounded-lg">
+            
+            <TabsList className="inline-flex h-auto w-full justify-start gap-1.5 bg-muted p-2.5 rounded-lg">
               <TabsTrigger value="overview" className="flex items-center gap-2 px-6">
                 <Info className="h-4 w-4" />
                 <span className="hidden sm:inline">Overview</span>
