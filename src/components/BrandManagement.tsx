@@ -22,7 +22,7 @@ export function BrandManagement({ onSelectBrand }: BrandManagementProps) {
   const [isCreateDialogOpen, setIsCreateDialogOpen] = useState(false);
   const [editingBrand, setEditingBrand] = useState<Brand | null>(null);
 
-  // Form state for creating/editing brands
+  // Form state for creating/editing brand
   const [formData, setFormData] = useState({
     name: "",
     description: "",
@@ -135,8 +135,8 @@ export function BrandManagement({ onSelectBrand }: BrandManagementProps) {
       {/* Header and Controls */}
       <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
         <div>
-          <h3 className="text-lg font-semibold">Brand Management</h3>
-          <p className="text-sm text-muted-foreground">Monitor brands with post URLs and keywords</p>
+          <h3 className="text-lg font-semibold">Manajemen Brand</h3>
+          <p className="text-sm text-muted-foreground">Pantau brand dengan URL postingan dan kata kunci</p>
         </div>
         
         <Dialog 
@@ -152,78 +152,78 @@ export function BrandManagement({ onSelectBrand }: BrandManagementProps) {
           <DialogTrigger asChild>
             <Button onClick={() => setIsCreateDialogOpen(true)} className="flex items-center gap-2">
               <Plus className="h-4 w-4" />
-              New Brand
+              Brand Baru
             </Button>
           </DialogTrigger>
           <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
             <DialogHeader>
-              <DialogTitle>{editingBrand ? 'Edit Brand' : 'Create New Brand'}</DialogTitle>
+              <DialogTitle>{editingBrand ? 'Edit Brand' : 'Buat Brand Baru'}</DialogTitle>
               <DialogDescription>
-                {editingBrand ? 'Update brand monitoring settings and keywords' : 'Set up brand monitoring with post URLs and keywords for comprehensive analysis'}
+                {editingBrand ? 'Perbarui pengaturan monitoring brand dan kata kunci' : 'Atur monitoring brand dengan URL postingan dan kata kunci untuk analisis komprehensif'}
               </DialogDescription>
             </DialogHeader>
             <div className="grid gap-4 py-4">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="name">Brand Name</Label>
+                  <Label htmlFor="name">Nama Brand</Label>
                   <Input
                     id="name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="Enter brand name"
+                    placeholder="Masukkan nama brand"
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="category">Category</Label>
+                  <Label htmlFor="category">Kategori</Label>
                   <Input
                     id="category"
                     value={formData.category}
                     onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                    placeholder="e.g., Automotive, Technology, Energy"
+                    placeholder="contoh: Otomotif, Teknologi, Energi"
                   />
                 </div>
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="description">Description</Label>
+                <Label htmlFor="description">Deskripsi</Label>
                 <Textarea
                   id="description"
                   value={formData.description}
                   onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                  placeholder="Describe what this brand monitoring focuses on"
+                  placeholder="Jelaskan fokus monitoring brand ini"
                   rows={3}
                 />
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="postUrls">Post URLs (one per line)</Label>
+                <Label htmlFor="postUrls">URL Postingan (satu per baris)</Label>
                 <Textarea
                   id="postUrls"
                   value={formData.postUrls}
                   onChange={(e) => setFormData({ ...formData, postUrls: e.target.value })}
-                  placeholder="https://twitter.com/brandname&#10;https://instagram.com/brandname&#10;https://youtube.com/brandname"
+                  placeholder="https://twitter.com/namabrand&#10;https://instagram.com/namabrand&#10;https://youtube.com/namabrand"
                   rows={4}
                 />
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="keywords">Keywords (comma-separated)</Label>
+                <Label htmlFor="keywords">Kata Kunci (dipisahkan koma)</Label>
                 <Textarea
                   id="keywords"
                   value={formData.keywords}
                   onChange={(e) => setFormData({ ...formData, keywords: e.target.value })}
-                  placeholder="brand name, product names, related terms, hashtags"
+                  placeholder="nama brand, nama produk, istilah terkait, hashtag"
                   rows={3}
                 />
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="competitors">Competitors (comma-separated)</Label>
+                <Label htmlFor="competitors">Kompetitor (dipisahkan koma)</Label>
                 <Input
                   id="competitors"
                   value={formData.competitors}
                   onChange={(e) => setFormData({ ...formData, competitors: e.target.value })}
-                  placeholder="Competitor 1, Competitor 2, Competitor 3"
+                  placeholder="Kompetitor 1, Kompetitor 2, Kompetitor 3"
                 />
               </div>
               
