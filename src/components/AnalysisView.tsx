@@ -226,10 +226,10 @@ export function AnalysisView({ entity, entityType, onBack }: AnalysisViewProps) 
                 <Heart className="h-4 w-4" />
                 <span className="hidden sm:inline">Emotions</span>
               </TabsTrigger>
-              <TabsTrigger value="audience" className="flex items-center gap-2">
+              {/* <TabsTrigger value="audience" className="flex items-center gap-2">
                 <Users className="h-4 w-4" />
                 <span className="hidden sm:inline">Audience</span>
-              </TabsTrigger>
+              </TabsTrigger> */}
               <TabsTrigger value="performance" className="flex items-center gap-2">
                 <BarChart3 className="h-4 w-4" />
                 <span className="hidden sm:inline">Performance</span>
@@ -408,7 +408,7 @@ export function AnalysisView({ entity, entityType, onBack }: AnalysisViewProps) 
           </Card>
         </TabsContent>
 
-        <TabsContent value="audience" className="space-y-6">
+        {/* <TabsContent value="audience" className="space-y-6">
           <div className="grid md:grid-cols-2 gap-6">
             <Card>
               <CardHeader>
@@ -490,7 +490,7 @@ export function AnalysisView({ entity, entityType, onBack }: AnalysisViewProps) 
               </div>
             </CardContent>
           </Card>
-        </TabsContent>
+        </TabsContent> */}
 
         <TabsContent value="performance" className="space-y-6">
           <div className="grid md:grid-cols-2 gap-6">
