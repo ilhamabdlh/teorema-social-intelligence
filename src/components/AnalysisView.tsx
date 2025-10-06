@@ -209,32 +209,32 @@ export function AnalysisView({ entity, entityType, onBack }: AnalysisViewProps) 
 
           {/* Detailed Analysis Tabs */}
           <Tabs defaultValue="overview" className="space-y-6">
-            <TabsList className="grid w-full grid-cols-6 gap-2 p-1.5 h-auto">
-              <TabsTrigger value="overview" className="flex items-center justify-center gap-2 py-3 px-4">
+            <TabsList className="inline-flex h-auto w-full justify-start gap-1 bg-muted p-1.5 rounded-lg">
+              <TabsTrigger value="overview" className="flex items-center gap-2 px-6">
                 <Info className="h-4 w-4" />
                 <span className="hidden sm:inline">Overview</span>
               </TabsTrigger>
-              <TabsTrigger value="sentiment" className="flex items-center justify-center gap-2 py-3 px-4">
+              <TabsTrigger value="sentiment" className="flex items-center gap-2 px-6">
                 <TrendingUp className="h-4 w-4" />
                 <span className="hidden sm:inline">Sentiment</span>
               </TabsTrigger>
-              <TabsTrigger value="topics" className="flex items-center justify-center gap-2 py-3 px-4">
+              <TabsTrigger value="topics" className="flex items-center gap-2 px-6">
                 <MessageSquare className="h-4 w-4" />
                 <span className="hidden sm:inline">Topics</span>
               </TabsTrigger>
-              <TabsTrigger value="emotions" className="flex items-center justify-center gap-2 py-3 px-4">
+              <TabsTrigger value="emotions" className="flex items-center gap-2 px-6">
                 <Heart className="h-4 w-4" />
                 <span className="hidden sm:inline">Emotions</span>
               </TabsTrigger>
-              {/* <TabsTrigger value="audience" className="flex items-center justify-center gap-2 py-3 px-4">
+              {/* <TabsTrigger value="audience" className="flex items-center gap-2 px-6">
                 <Users className="h-4 w-4" />
                 <span className="hidden sm:inline">Audience</span>
               </TabsTrigger> */}
-              <TabsTrigger value="performance" className="flex items-center justify-center gap-2 py-3 px-4">
+              <TabsTrigger value="performance" className="flex items-center gap-2 px-6">
                 <BarChart3 className="h-4 w-4" />
                 <span className="hidden sm:inline">Performance</span>
               </TabsTrigger>
-              <TabsTrigger value="competitive" className="flex items-center justify-center gap-2 py-3 px-4">
+              <TabsTrigger value="competitive" className="flex items-center gap-2 px-6">
                 <Target className="h-4 w-4" />
                 <span className="hidden sm:inline">Competitive</span>
               </TabsTrigger>
