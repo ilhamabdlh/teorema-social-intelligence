@@ -209,36 +209,38 @@ export function AnalysisView({ entity, entityType, onBack }: AnalysisViewProps) 
 
           {/* Detailed Analysis Tabs */}
           <Tabs defaultValue="overview" className="space-y-6">
-            <TabsList className="grid w-full grid-cols-7">
-              <TabsTrigger value="overview" className="flex items-center gap-2">
-                <Info className="h-4 w-4" />
-                <span className="hidden sm:inline">Overview</span>
-              </TabsTrigger>
-              <TabsTrigger value="sentiment" className="flex items-center gap-2">
-                <TrendingUp className="h-4 w-4" />
-                <span className="hidden sm:inline">Sentiment</span>
-              </TabsTrigger>
-              <TabsTrigger value="topics" className="flex items-center gap-2">
-                <MessageSquare className="h-4 w-4" />
-                <span className="hidden sm:inline">Topics</span>
-              </TabsTrigger>
-              <TabsTrigger value="emotions" className="flex items-center gap-2">
-                <Heart className="h-4 w-4" />
-                <span className="hidden sm:inline">Emotions</span>
-              </TabsTrigger>
-              {/* <TabsTrigger value="audience" className="flex items-center gap-2">
-                <Users className="h-4 w-4" />
-                <span className="hidden sm:inline">Audience</span>
-              </TabsTrigger> */}
-              <TabsTrigger value="performance" className="flex items-center gap-2">
-                <BarChart3 className="h-4 w-4" />
-                <span className="hidden sm:inline">Performance</span>
-              </TabsTrigger>
-              <TabsTrigger value="competitive" className="flex items-center gap-2">
-                <Target className="h-4 w-4" />
-                <span className="hidden sm:inline">Competitive</span>
-              </TabsTrigger>
-            </TabsList>
+            <div className="flex justify-center">
+              <TabsList className="grid grid-cols-6 w-fit">
+                <TabsTrigger value="overview" className="flex items-center gap-2">
+                  <Info className="h-4 w-4" />
+                  <span className="hidden sm:inline">Overview</span>
+                </TabsTrigger>
+                <TabsTrigger value="sentiment" className="flex items-center gap-2">
+                  <TrendingUp className="h-4 w-4" />
+                  <span className="hidden sm:inline">Sentiment</span>
+                </TabsTrigger>
+                <TabsTrigger value="topics" className="flex items-center gap-2">
+                  <MessageSquare className="h-4 w-4" />
+                  <span className="hidden sm:inline">Topics</span>
+                </TabsTrigger>
+                <TabsTrigger value="emotions" className="flex items-center gap-2">
+                  <Heart className="h-4 w-4" />
+                  <span className="hidden sm:inline">Emotions</span>
+                </TabsTrigger>
+                {/* <TabsTrigger value="audience" className="flex items-center gap-2">
+                  <Users className="h-4 w-4" />
+                  <span className="hidden sm:inline">Audience</span>
+                </TabsTrigger> */}
+                <TabsTrigger value="performance" className="flex items-center gap-2">
+                  <BarChart3 className="h-4 w-4" />
+                  <span className="hidden sm:inline">Performance</span>
+                </TabsTrigger>
+                <TabsTrigger value="competitive" className="flex items-center gap-2">
+                  <Target className="h-4 w-4" />
+                  <span className="hidden sm:inline">Competitive</span>
+                </TabsTrigger>
+              </TabsList>
+            </div>
 
             <TabsContent value="overview" className="space-y-6">
               <EntityDetails entity={entity} entityType={entityType} />
