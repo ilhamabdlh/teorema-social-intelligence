@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "./components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./components/ui/tabs";
 import { Badge } from "./components/ui/badge";
@@ -15,6 +15,7 @@ import {
   Building2,
   FileText
 } from "lucide-react";
+import logoSocialInt from "./assets/logo_socialint.png";
 
 export default function App() {
   const [lastUpdated, setLastUpdated] = useState(new Date());
@@ -61,11 +62,13 @@ export default function App() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                  <BarChart3 className="h-6 w-6 text-white" />
-                </div>
+                <img 
+                  src={logoSocialInt} 
+                  alt="Social Intelligence Logo" 
+                  className="w-10 h-10 object-contain"
+                />
                 <div>
-                  <h1 className="text-2xl font-bold">Sentiment Analysis Dashboard</h1>
+                  <h1 className="text-2xl font-bold">Social Intelligence Dashboard</h1>
                   <p className="text-sm text-muted-foreground">Comprehensive content, brand, and campaign monitoring</p>
                 </div>
               </div>
@@ -95,15 +98,15 @@ export default function App() {
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
           <TabsList className="grid w-full grid-cols-3 lg:w-fit lg:grid-cols-3">
             <TabsTrigger value="campaign-analysis" className="flex items-center space-x-2">
-              <Target className="h-4 w-4" />
+              <img src={logoSocialInt} alt="Logo" className="h-4 w-4 object-contain" />
               <span>Campaign Analysis</span>
             </TabsTrigger>
             <TabsTrigger value="brand-analysis" className="flex items-center space-x-2">
-              <Building2 className="h-4 w-4" />
+              <img src={logoSocialInt} alt="Logo" className="h-4 w-4 object-contain" />
               <span>Brand Analysis</span>
             </TabsTrigger>
             <TabsTrigger value="content-analysis" className="flex items-center space-x-2">
-              <FileText className="h-4 w-4" />
+              <img src={logoSocialInt} alt="Logo" className="h-4 w-4 object-contain" />
               <span>Content Analysis</span>
             </TabsTrigger>
           </TabsList>
@@ -201,7 +204,7 @@ export default function App() {
       <footer className="border-t bg-card mt-12">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between text-sm text-muted-foreground">
-            <p>© 2025 Sentiment Analysis Dashboard. Comprehensive content monitoring and analysis.</p>
+            <p>© 2025 Social Intelligence Dashboard. Comprehensive content monitoring and analysis.</p>
             <div className="flex items-center space-x-4">
               <span>Data sources: Twitter/X, Reddit, YouTube, LinkedIn, TikTok, Instagram</span>
               <Badge variant="outline" className="text-xs">
